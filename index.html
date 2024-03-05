@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5a0d942380.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        body {
+            background-color: turquoise;
+            padding: 0;
+            margin: 0;
+            height: 100vh; /* Altura del body al 100% de la ventana del navegador */
+            font-family: 'Roboto', sans-serif; /* Utilizando la fuente Roboto */
+        }
+
+        header {
+            background-color: black;
+            color: turquoise;
+            height: 100px;
+            display: flex; /* Convertir el header en un contenedor flexible */
+            align-items: center; /* Centrar verticalmente los elementos */
+            justify-content: center; /* Centrar horizontalmente los elementos */
+        }
+        
+        header h3:hover {
+            color: white;
+        }
+
+        header h3 {
+            margin: 10px;
+        }
+
+        .div1 {
+            background-color: black;
+            color: white;
+            height: 500px;
+            width: 100%;
+            display: flex;
+        }
+
+        .divfoto {
+            width: 100%;
+            background-color: black;
+            display: flex; /* Utilizar flexbox para centrar */
+            justify-content: center; /* Centrar horizontalmente */
+            align-items: center; /* Centrar verticalmente */
+        }
+
+        .divfoto img{
+            margin: auto;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid turquoise;
+        }
+
+        .divh3 {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: -60px;
+        }
+
+        .divh3 h3{
+            background-color: turquoise;
+            color: black;
+            padding: 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            width: 20%;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto; /* Centrar horizontalmente */
+            margin-top: 15%;
+        }
+
+        li {
+            margin: 20px;
+            list-style: none; /* Quitar los marcadores de lista */
+        }
+
+        a {
+            text-decoration: none; /* Quitar el subrayado de los enlaces */
+            color: inherit;
+        }
+        .ul2 {
+            display: flex;
+            justify-content: center;
+        }
+        #showMenuBtn {
+            display: none; /* Ocultar el botón por defecto */
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: transparent;
+            color: turquoise;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5em; /* Tamaño de la fuente del botón */
+            z-index: 2;
+        }
+       
+        /* Ajustar el tamaño de la fuente del icono */
+        .fab {
+            font-size: 30px; /* Cambiar el tamaño del icono según lo necesites */
+        }
+
+        .botonTutorMe {
+            background-color: turquoise;
+            color: black;
+            padding: 15px;
+            margin: 25px;
+            border-radius: 10px;
+        }
+
+        .botonHireMe {
+        padding: 5px;
+        border-radius: 2px solid turquoise;
+        border: 2px turquoise;
+        }
+
+       /* Cambiar el color del icono */
+       .fab.fa-youtube:hover {
+            color: red; /* Cambiar el color del icono a rojo */
+        }
+        .fa-x-twitter {
+            font-size: 27px;
+            color: white;
+        }
+
+        .fa-x-twitter:hover {
+            color: rgb(238, 255, 0); /* Cambiar el color del icono a rojo */
+        }
+        .fa-linkedin:hover {
+            color: blue; /* Cambiar el color del icono a rojo */
+        }
+   
+        .fab.fa-github:hover {
+            color: purple; /* Cambiar el color del icono a rojo */
+        }
+        .fab.fa-dev:hover {
+            color: rgb(21, 158, 62); /* Cambiar el color del icono a rojo */
+        }
+
+        @media only screen and (max-width: 1200px) {
+
+            .divh3 {
+                margin-top: -20px;
+            }
+        }
+
+        @media only screen and (max-width: 1000px) {
+
+            .divh3 {
+                margin-top: -20px;
+            }
+        }
+
+        @media only screen and (max-width: 800px) {
+
+            .divh3 {
+                margin-top: -10px;
+            }
+        }
+
+       @media only screen and (max-width: 680px) {
+            .div1 {
+                flex-direction: column-reverse;
+                margin-top: 200px;
+            }
+            
+            .divh3 {
+            }
+
+            .divfoto {
+                order: 1; /* Cambiar el orden para que se muestre encima */
+            }
+
+    
+
+            header {
+        padding-top: 50px;
+        display: none; /* Asegurar que el header se muestre */
+        position: relative; /* Restablecer la posición */
+        background-color: black; /* Restablecer el color de fondo */
+        height: auto; /* Restablecer la altura */
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+
+    header h3 {
+        margin: 10px; /* Restablecer el margen */
+    }
+    #showMenuBtn {
+                display: block; /* Mostrar el botón cuando el ancho de la pantalla sea menor o igual a 800px */
+            }
+}
+
+
+
+/*//////////////////////////////////////////////////////////////////////////////////*/
+
+body div:nth-child(4) {
+  height: 100px;
+}
+
+/*/////////////////////////////////////////////////////////////*/
+
+body div:nth-child(5) {
+  height: 600px;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  position: relative;
+  
+}
+
+body div:nth-child(5) img {
+    width: 45%; /* Asegurar que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Permitir que la altura se ajuste automáticamente */
+    padding: 4%; /* Establecer el padding superior como el 20% del ancho del contenedor */
+    box-sizing: border-box; /* Incluir el padding en el tamaño total de la imagen */
+    position: absolute; /* Posicionar la imagen absolutamente dentro del div */
+    top: 0; /* Alinear la imagen en la parte superior del div */
+    left: 0; /* Alinear la imagen en la parte izquierda del div */
+}
+
+
+.cambianombre22 {
+    width: 100%;
+background-color: turquoise;
+flex-wrap: wrap;
+}
+.cambianombre11 {
+    width: 100%;
+background-color:black;
+flex-wrap: wrap;
+}
+
+
+
+.mh-about {
+    background-color: blue;
+}
+.wow1 {
+}
+.wow {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.ul-about-me {
+    display: flex;
+    flex-wrap: wrap;
+}
+    </style>
+</head>
+<body>
+    <!-- HEADER-->
+    <header>
+        <h3>Home</h3>
+        <h3>About</h3>
+        <h3>Services</h3>
+        <h3>Skills</h3>
+        <h3>Projects</h3>
+        <h3>Blog</h3>
+        <h3>Pircing</h3>
+    </header>
+            <!-- BOTON HEADER MOVIL-->
+    <button id="showMenuBtn">&#9776;</button>
+    <!-- DIV MIS DATOS HOME-->
+    <div class="div1">
+        <div class="divh3">
+            <h3>Holaaa!</h3>
+            <h1>Raül Lama</h1>
+            <h2>Fullstack Developer</h2>
+            <ul>
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:">Ruloxnft@gmail.com</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone"></i>
+                    <a href="callto:">+34 698 600 080</a>
+                    <a href="tel:+34698600080">+34 698 600 080</a>
+                </li>
+                <li>
+                    <address>Palma de Mallorca, Islas Baleares. España</address>
+                </li>
+            </ul>
+            <ul class="ul2">
+                  <li class="liyoutube">
+                    <a href="https://www.youtube.com/channel/UCCI7_2xZPCeBnKqI8vNUINg" target="_blank">
+                      <i class="fab fa-youtube"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/Raullama12" target="_blank">
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/in/ra%C3%BCl-lama-0145b6247/" target="_blank">
+                    <i class="fab fa-linkedin"></i></a>
+                  </li>
+                  <li class="mr-4">
+                    <a href="https://github.com/Raullam" target="_blank">
+                    <i class="fab fa-github"></i></a>
+                  </li>
+                  <li class="mr-4">
+                    <a href="https://dev.to/raullam" target="_blank">
+                    <i class="fab fa-dev"></i></a>
+                  </li>
+                </ul>
+                <a href="#mh-pricing" class="botonTutorMe"> Tutor Me </a>
+                <a href="mailto:ruloxnft@gmail.com?body=Hi Raül, I was browsing your website and wanted to connect.&            subject=Partnership Proposal" class="botonHireMe" target="_blank" data-wow-duration="0.8s" data-wow-delay="0.4s" >Hire Me</a>
+        </div>
+    
+        <!-- DIV IMAGEN HOME-->
+        <div class="divfoto">
+            <img src="heri.jpg" />
+        </div>
+        
+        
+    </div>
+    
+    <!-- DIV SEPARADOR PENDIENTE..-->
+    <div></div>
+
+    <!-- 2 SECCION-->
+    <div >
+        <div class="cambianombre11">
+        <img src="ab-img.png" alt="chico_con_ordenador" class="img-chico">
+    </div>
+    <div class="cambianombre22">
+        <h2
+                class="wow fadeInUp wow1"
+                data-wow-duration="0.8s"
+                data-wow-delay="0.1s"
+              >
+                About Me
+              </h2>
+              <p
+                class="wow fadeInUp"
+                data-wow-duration="0.8s"
+                data-wow-delay="0.2s"
+              >
+                I have been working in the field of software development 
+                for a long time and I have a lot of knowledge and skills 
+                in this field. Currently I am still training and teaching. 
+                I also take care of creating, maintaining or improving the 
+                code of websites or applications for a more efficient and 
+                secure use and I can also teach or advise you about blockchain 
+                technology and its advantages and possibilities to implement 
+                it in your company. This can include from mobile applications 
+                to websites and enterprise systems. I have a good knowledge of 
+                the tools and technologies used in software development, as well 
+                as the processes and best practices used to produce high quality software.
+
+             
+              </p>
+
+              
+                <ul class="ul-about-me">
+                  <li><span>HTML</span></li>
+                  <li><span>CSS</span></li>
+                  <li><span>JavaScript</span></li>
+                  <li><span>Blockchain</span></li>
+                  <li><span>ReactJs</span></li>
+                </br>
+                  <li><span>ReactNative</span></li>
+                  <li><span>VueJs</span></li>
+                  <li><span>NextJs</span></li>
+                  <li><span>NodeJs</span></li>
+                  <li><span>Solidity</span></li>
+                  <!-- <li><span>AngularJs</span></li> -->
+                  <!-- <li><span>PHP</span></li> -->
+                </ul>
+            </div>
+
+    </div>
+
+    <script>
+        const showMenuBtn = document.getElementById('showMenuBtn');
+        const header = document.querySelector('header');
+
+        showMenuBtn.addEventListener('click', () => {
+            header.style.display = header.style.display === 'none' ? 'flex' : 'none'; // Alternar la visibilidad del encabezado
+            window.addEventListener('resize', () => {
+    if (window.innerWidth > 800) {
+        header.style.display = 'flex'; // Mostrar el encabezado si el ancho de la pantalla es mayor que 800px
+    }
+});
+
+        });
+        
+    </script>
+
+</body>
+</html>
